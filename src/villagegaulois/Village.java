@@ -59,6 +59,10 @@ public class Village {
 		return chaine.toString();
 	}
 	
+	public String installerVendeur(Gaulois vendeur, String produit,int nbProduit) {
+		this.marche.etals[this.marche.trouverEtalLibre()].occuperEtal( vendeur,  produit,  nbProduit);
+	}
+	
 	private static class Marche{
 		Etal etals[];
 		private Marche(int nbEtals) {
